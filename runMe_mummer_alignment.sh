@@ -16,16 +16,22 @@ REFERENCE="${BASE_DIR}/${species}/Native/native_genome.fasta"
 QUERY="${BASE_DIR}/${species}/Invasive/invasive_genome.fasta"
 OUT_PREFIX="${OUTPUT_DIR}/${species}_alignment"
 
+# Check if output files already exist (skip if they do)
+if [[ -f "${OUT_PREFIX}.delta" && -f "${OUT_PREFIX}.coords" && -f "${OUT_PREFIX}.snps" ]]; then
+    echo "Skipping $species: Alignment already completed."
+    continue
+fi
+
 sbatch  <<- EOF
 #!/bin/bash
 
-#SBATCH --job-name=Mummer_$species                    #Job name
+#SBATCH --job-name=Mummer_$species                     #Job name
 #SBATCH --output=logs/mummer_alignment_$species.log
 #SBATCH --error=logs/mummer_alignment_$species.err
 #SBATCH --time=5-00                                    #Runtime in D-HH:MM
 #SBATCH --partition=general,jrw0107_std,nova           # Change if needed
-#SBATCH --ntasks=10                                    # Number of CPU cores
-#SBATCH --mem=50G                                      # Memory as in GB
+#SBATCH --ntasks=5                                     # Number of CPU cores
+#SBATCH --mem=500G                                     # Memory as in GB
 #SBATCH --mail-type=END,FAIL                           # Email user when job finishes or fails
 #SBATCH --mail-user=tzm0087@auburn.edu                 # Email to which notifications will be sent
 
