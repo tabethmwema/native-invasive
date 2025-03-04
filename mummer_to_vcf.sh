@@ -24,7 +24,7 @@ REF_DIR="/home/tzm0087/Genomes"
 mkdir -p "$VCF_DIR"
 
 # List of species
-species_list=("Ticks" "Crab" "Drosophila" "Mosquitoes" "Fish" "Birds" "Ants" "Fungus" "Mites" "Pig" "Snail" "Worms" "Beetle")
+species_list=("Ticks" "Crab" "Mosquitoes" "Fish" "Birds" "Ants" "Fungus" "Mites" "Pig" "Snail" "Worms" "Beetle")
 
 # Run conversion for each species
 for species in "${species_list[@]}"; do
