@@ -2,7 +2,7 @@
 rm(list = ls()) 
 
 # Set Working Directory
-setwd("C:/Users/tzm0087/OneDrive - Auburn University/Documents/SCHOOL/PhD/CLASSES/THIRD YEAR/COMPUTATIONAL BIO/Capstone 4/Mwema_CP4/PartA")
+setwd("C:/Users/tzm0087/OneDrive/PartA")
 
 # Install packages
 install.packages("maps")
@@ -49,6 +49,7 @@ legend("bottomleft", legend = c("M. m. castaneus", "M. m. domesticus"), pch = c(
 
 # Save and close the plot
 dev.off()
+
 
 
 
