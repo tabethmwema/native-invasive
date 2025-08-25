@@ -8,7 +8,7 @@
 #SBATCH --ntasks=1
 #SBATCH --mem=8G
 #SBATCH --mail-type=END,FAIL
-#SBATCH --mail-user=tzm0087@auburn.edu
+#SBATCH --
 
 # Load PLINK
 module load plink/1.9
