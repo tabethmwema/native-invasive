@@ -1,6 +1,6 @@
 I study how biological invasions shape genome–wide diversity by comparing native vs. invasive populations across multiple species. Using public reference genomes and whole-genome variant data, I quantify:
 
-_ **Window-based nucleotide diversity (π) in 10 kb windows with weighted means,
+_ **Window-based nucleotide diversity (π)** in 10 kb windows with weighted means,
 
 _ **Regional contrasts along chromosomes (telomere vs. centromere),
 
