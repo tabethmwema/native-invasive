@@ -5,8 +5,8 @@ library(tidyverse)   # dplyr, ggplot2, readr, forcats, etc.
 library(scales)      # rescale()
 
 # --- Paths -------------------------------------------------------------------
-in_path  <- "C:/Users/Owner/OneDrive - Auburn University/Documents/SCHOOL/PhD/CLASSES/DISSERTATION/DISSERTATION CHAPTERS/In use/NEW CHAPTERS/ILP.csv"
-out_dir <- "C:/Users/Owner/OneDrive - Auburn University/Documents/SCHOOL/PhD/CLASSES/DISSERTATION/DISSERTATION CHAPTERS/In use/NEW CHAPTERS/VCFs/New_use this/25_march_2025/All 3/Graphs"
+in_path  <- "C:/Users/Owner/OneDrive/ILP.csv"
+out_dir <- "C:/Users/Owner/OneDrive/Graphs"
 out_csv  <- file.path(out_dir, "ILP_results.csv")
 out_pngA <- file.path(out_dir, "ILP_panelA_ILP_bar.png")
 out_pngB <- file.path(out_dir, "ILP_panelB_contributions.png")
@@ -138,3 +138,4 @@ pB  # show in viewer
        
        
        
+
