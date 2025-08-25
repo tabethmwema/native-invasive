@@ -11,7 +11,7 @@ library(car)       # Levene's test
 library(effsize)   # Cliff's delta
 
 
-setwd("~/SCHOOL/PhD/CLASSES/DISSERTATION/DISSERTATION CHAPTERS/In use/NEW CHAPTERS/VCFs/New_use this/25_march_2025/All 3")
+setwd("")
 
 # Load data
 In_N_data <- read.csv("Merged_Heterozygosity_Standardized.csv", header = TRUE)
@@ -83,7 +83,7 @@ print(het_plot)
 
 # Save figure (same path & settings)
 ggsave(
-  filename = "C:/Users/Owner/OneDrive - Auburn University/Documents/SCHOOL/PhD/CLASSES/DISSERTATION/DISSERTATION CHAPTERS/In use/NEW CHAPTERS/VCFs/New_use this/25_march_2025/All 3/Graphs/Delta_Heterozygosity_High.png",
+  filename = "Delta_Heterozygosity_High.png",
   plot = het_plot, width = 13, height = 8, dpi = 600, units = "in"
 )
 
@@ -119,3 +119,4 @@ cat("Shapiro-Wilk: W =", round(unname(shapiro_result$statistic), 2),
     ", p <", ifelse(shapiro_result$p.value < 0.001, "0.001", round(shapiro_result$p.value, 3)), "\n", sep = "")
 cat("Levene's: F =", round(levene_result$`F value`[1], 2),
     ", p =", signif(levene_result$`Pr(>F)`[1], 3), "\n", sep = "")
+
