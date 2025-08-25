@@ -16,7 +16,7 @@ library(scales)
 # -------------------------------------
 # Config: base folder and species map
 # -------------------------------------
-file_dir <- "~/SCHOOL/PhD/CLASSES/DISSERTATION/DISSERTATION CHAPTERS/In use/NEW CHAPTERS/VCFs/New_use this/25_march_2025/All 3/Nucleotide"
+file_dir <- "~Nucleotide"
 
 species_list <- c(
   "Asian tiger mosquito"    = "Mosq",
@@ -164,7 +164,7 @@ ggplot(plot_data, aes(x = Status, y = PI, fill = Status, color = Status)) +
 
 ggsave(
   filename = "Nucleotide_Diversity_HalfViolinBigger.png",
-  path = "C:/Users/Owner/OneDrive - Auburn University/Documents/SCHOOL/PhD/CLASSES/DISSERTATION/DISSERTATION CHAPTERS/In use/NEW CHAPTERS/VCFs/New_use this/25_march_2025/All 3/Graphs",
+  path = "C:/Users/Owner/OneDrive/Graphs",
   dpi = 600, width = 10, height = 7, units = "in"
 )
 
@@ -189,7 +189,7 @@ all_pi_data %>% group_by(Species, Status) %>% summarise(
 #    - Same logic; I only renamed the mapping to avoid
 #      overwriting main species_list.
 # =========================================================
-setwd("C:/Users/Owner/OneDrive - Auburn University/Documents/SCHOOL/PhD/CLASSES/DISSERTATION CHAPTERS/In use/NEW CHAPTERS/VCFs/New_use this/25_march_2025/All 3/Nucleotide")
+setwd("C:/Users/Owner/OneDrive/Nucleotide")
 
 region_species <- list(
   Crab = "Chinese mitten crab",
@@ -269,7 +269,7 @@ region_pi_plot <- ggplot(region_means, aes(x = Region, y = Mean_pi, fill = Statu
   scale_fill_manual(values = c("Native" = "#458B00", "Invasive" = "goldenrod3"))
 
 ggsave(
-  filename = "C:/Users/Owner/OneDrive - Auburn University/Documents/SCHOOL/PhD/CLASSES/DISSERTATION CHAPTERS/In use/NEW CHAPTERS/VCFs/New_use this/25_march_2025/All 3/Graphs/PerSpecies_Region_Status_Comparison.png",
+  filename = "C:/Users/Owner/OneDrive/PerSpecies_Region_Status_Comparison.png",
   plot = region_pi_plot, width = 12, height = 7, dpi = 600
 )
 
@@ -508,6 +508,7 @@ ggplot(summary_data, aes(x = Region, y = Mean, fill = Status)) +
   )
 
 ggsave(
-  filename = "C:/Users/Owner/OneDrive - Auburn University/Documents/SCHOOL/PhD/CLASSES/DISSERTATION CHAPTERS/In use/NEW CHAPTERS/VCFs/New_use this/25_march_2025/All 3/Graphs/Region_Status_Comparison_Plot.png",
+  filename = "C:/Users/Owner/OneDrive/Region_Status_Comparison_Plot.png",
   plot = last_plot(), width = 10, height = 6, dpi = 600
 )
+
